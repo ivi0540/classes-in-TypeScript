@@ -1,3 +1,4 @@
+"use strict";
 // Тема: Рвбота с классами на TypeScript а именно создание класса, работа с аксессорами (set и get методы), наследование классов прототипирование и подключение из другого файла (export)
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -14,6 +15,8 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.sayHello = void 0;
 // Теория по данной теме:
 //  https://metanit.com/web/typescript/3.10.php
 var User = /** @class */ (function () {
@@ -62,5 +65,16 @@ var Citizen = /** @class */ (function (_super) {
     }
     return Citizen;
 }(User));
+// Citizen.prototype.sayHello = function () {
+//     console.log("Hello World");
+// };
 var innna = new Citizen("innna345", 23, "Inna", "Sharapova", "410011");
 console.log(innna);
+// 4 - Работа с прототипами. Прототим это инмтрумент при помощи которого можно добавить функционал в класс который там изначально отсутствовал или добавить функционал (поля методы) из другого обьекта. ПРИМЕЧАНИЕ в TS не работает я xз почему но на JS  все норм.
+// Ссылки
+// https://learn.javascript.ru/prototype-inheritance
+// https://www.youtube.com/watch?v=aQkgUUmUJy4
+function sayHello() {
+    return "Hello";
+}
+exports.sayHello = sayHello;

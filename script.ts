@@ -37,7 +37,7 @@ dima._age = 92;
 // );
 
 class Citizen extends User {
-    // 2 - наследование в TypeScritp
+    // 3 - наследование в TypeScritp
     public firstName: string;
     public lastName: string;
     public documentNumber: string;
@@ -50,5 +50,19 @@ class Citizen extends User {
     }
 }
 
+
+// Citizen.prototype.sayHello = function () {
+//     console.log("Hello World");
+// };
+
 let innna: Citizen = new Citizen("innna345", 23, "Inna", "Sharapova", "410011");
 console.log(innna);
+
+// 4 - Работа с прототипами. Прототим это инмтрумент при помощи которого можно добавить функционал в класс который там изначально отсутствовал или добавить функционал (поля методы) из другого обьекта. ПРИМЕЧАНИЕ в TS не работает я xз почему но на JS  все норм.
+// Ссылки
+// https://learn.javascript.ru/prototype-inheritance
+// https://www.youtube.com/watch?v=aQkgUUmUJy4
+
+// 5 - с импортом экспортом аналогично в js работает в js нет
+// Ссылка
+// https://learn.javascript.ru/import-export 
